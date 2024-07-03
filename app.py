@@ -65,6 +65,7 @@ import tensorflow as tf
 import numpy as np
 import io
 from PIL import Image
+from app import app
 
 # Path to the TensorFlow Lite model
 tflite_model_path = 'model.tflite'
@@ -132,4 +133,4 @@ def predict():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0',port=8000)
+    app.run()
